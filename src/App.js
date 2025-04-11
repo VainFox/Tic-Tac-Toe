@@ -15,12 +15,14 @@ function Board({ xIsNext, squares, onPlay }) {
     }
     const nextSquares = squares.slice();
     if (xIsNext) {
-      nextSquares[i] = "X";
+      nextSquares[i] = "A";
     } else {
-      nextSquares[i] = "O";
+      nextSquares[i] = "B";
     }
     onPlay(nextSquares);
   }
+
+  /*Code by dongruixue*/
 
   const winner = calculateWinner(squares);
   let status;
